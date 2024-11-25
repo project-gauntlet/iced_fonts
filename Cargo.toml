@@ -1,7 +1,7 @@
 [package]
 name = "iced_fonts"
 description = "Include fonts via feature flags in your Iced project!"
-version = "0.1.1"
+version = "0.1.99"
 edition = "2021"
 license = "MIT"
 homepage = "https://iced.rs"
@@ -23,7 +23,8 @@ full = ["bootstrap", "nerd"]
 iced_core.workspace = true
 
 [workspace.dependencies]
-iced_core = "0.13"
+#iced_core = "0.13"
+iced_core = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13" }
 
 [patch.crates-io]
 # iced_core = { git = "https://github.com/iced-rs/iced.git" }
