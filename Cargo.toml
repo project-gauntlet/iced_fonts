@@ -12,7 +12,7 @@ readme.workspace = true
 authors.workspace = true
 
 [workspace.package]
-version = "0.2.0"
+version = "0.2.99"
 edition = "2024"
 license = "MIT"
 homepage = "https://iced.rs"
@@ -49,7 +49,8 @@ full = [
 members = ["macros"]
 
 [dev-dependencies]
-iced = "0.14.0-dev"
+#iced = "0.13.99"
+iced = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
 
 [dependencies]
 iced_fonts_macros = {path = "macros"}
@@ -58,18 +59,20 @@ iced_core.workspace = true
 iced_widget.workspace = true
 
 [workspace.dependencies]
-iced_core = "0.14.0-dev" # Iced core has the text widget, which is the only one we need.
-iced_widget = "0.14.0-dev" # TODO 
+#iced_core = "0.13.99" # Iced core has the text widget, which is the only one we need.
+iced_core = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_widget = "0.13.99" # TODO
+iced_widget = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
 proc-macro2 = "1"
 quote = "1"
 syn = "2"
 ttf-parser = "0.25"
 
 
-[patch.crates-io]
-iced = { git = "https://github.com/iced-rs/iced.git", rev = "beddf49c" }
-iced_core = { git = "https://github.com/iced-rs/iced.git", rev = "beddf49c" }
-iced_widget = { git = "https://github.com/iced-rs/iced.git", rev = "beddf49c" }
+#[patch.crates-io]
+#iced = { path = "../../RustroverProjects/iced-fork" }
+#iced_core = { path = "../../RustroverProjects/iced-fork/core" }
+#iced_widget = { path = "../../RustroverProjects/iced-fork/widget" }
 
 [package.metadata.docs.rs]
 features = ["full"]
