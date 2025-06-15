@@ -1338,8 +1338,6 @@ dependencies = [
 name = "iced_fonts_macros"
 version = "0.2.99"
 dependencies = [
- "iced_core",
- "iced_widget",
  "proc-macro2",
  "quote",
  "syn",
